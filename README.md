@@ -6,6 +6,7 @@ To develop an LSTM-based model for recognizing the named entities in the text.
 
 ## Problem Statement and Dataset
 We propose a deep neural network (NN) architecture, namely the bidirectional Long-Short Term Memory (Bi-LSTM) based model for NER. Based on existing gold standard datasets, we evaluated and compared several models for identifying biomedical-named entities. Our deep NN-based Bi-LSTM model using word and character level embeddings outperforms CRF and Bi-LSTM using only word-level embeddings significantly.
+
 ![alt text](image.png)
 
 ## DESIGN STEPS
@@ -29,6 +30,7 @@ We compile the model and fit the train sets and validation sets,We plot the nece
 ## PROGRAM
 ### Name:GANESH S
 ### Register Number:212222040042
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -140,6 +142,7 @@ print("{:15}{:5}\t {}\n".format("Word", "True", "Pred"))
 print("-" *30)
 for w, true, pred in zip(X_test[i], y_true, p[0]):
     print("{:15}{}\t{}".format(words[w-1], tags[true], tags[pred]))
+```
 
 ## OUTPUT
 
